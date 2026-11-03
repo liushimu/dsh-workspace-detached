@@ -6,6 +6,22 @@
 
 > **0.2.3 preview.** This is an independent, third-party plugin, not an official DSH feature or a patch to Better Workspace. It uses public plugin interfaces and does not modify DSH Core. Better Workspace and AgentTeams are not runtime dependencies. The window still requires a running DSH host: it is not a standalone chat application.
 
+## Screenshots
+
+### Main window and focused navigator
+
+The main window keeps the conversation while workspace navigation lives in its own window. A focused workspace is shown above previews of the others. Conversation content, financial figures, the account area and some unrelated titles are covered for privacy; the layout has not been redrawn.
+
+![DSH main window beside the detached workspace navigator, showing a focused workspace and bottom previews](<https://raw.githubusercontent.com/liushimu/dsh-workspace-detached/main/assets/screenshots/detached-focus.png>)
+
+### Workspace overview
+
+The overview shows multiple workspace cards, retaining path nesting, name groups, session hierarchy and activity indicators. The provider's existing privacy mosaics are retained in this image.
+
+![Detached window workspace overview showing multiple workspaces and grouped session hierarchies](<https://raw.githubusercontent.com/liushimu/dsh-workspace-detached/main/assets/screenshots/detached-overview.png>)
+
+These real screenshots were provided and approved by the user for documentation. Still images are not acceptance evidence for every interaction, display or system combination.
+
 ## Features
 
 - Detach workspace navigation into its own Windows window and return it to the sidebar when needed.
@@ -60,7 +76,7 @@ Native state defaults to the current DSH profile's `data/workspace-navigator`, w
 
 The native carrier is currently **unsigned**; Windows or enterprise policies may prevent execution. Verify the source and do not bypass system policy. Automated model, protocol, lifecycle, DOM/SVG/CSS and payload checks are not physical WebView2, DPI, drag-and-drop, clipboard or animation acceptance. The latest hierarchy/splitter/typography/glyph combination still needs real GUI confirmation. Earlier-candidate evidence is not a full acceptance claim for this release.
 
-There is no all-versions, all-display-layouts or all-input-method guarantee. Native startup failure is reported and the main sidebar is restored where possible; there is no alternate browser-window backend. No private-workspace screenshots are included in the initial public candidate. When reporting an issue, include relevant versions and reproduction steps, and redact paths, session titles, conversation content and credentials.
+There is no all-versions, all-display-layouts or all-input-method guarantee. Native startup failure is reported and the main sidebar is restored where possible; there is no alternate browser-window backend. Only share screenshots containing demonstration details you intend to make public. When reporting an issue, include relevant versions and reproduction steps, and redact paths, session titles, conversation content and credentials.
 
 ## Development and licenses
 
