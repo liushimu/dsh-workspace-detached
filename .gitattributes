@@ -1,0 +1,2 @@
+* text=auto eol=lf
+native/win-x64/** -text

@@ -1,0 +1,13 @@
+{
+  "id": "liushimu/dsh-workspace-detached",
+  "version": "0.2.3",
+  "main": "./src/index.js",
+  "description": "Independent workspace navigator; owns its grouping UI and native window without modifying DSH.",
+  "engines": {
+    "dsh": ">=0.2.1-rc.3"
+  },
+  "contributes": {
+    "tools": [],
+    "skills": []
+  }
+}

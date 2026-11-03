@@ -1,0 +1,87 @@
+{
+  "name": "dsh-workspace-detached",
+  "version": "0.2.3",
+  "description": "Pop DSH workspace and session navigation into a separate Windows window, with grouping, logical drag-and-drop and activity/manual ordering.",
+  "type": "module",
+  "license": "MIT",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./src/client.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=22.19",
+    "dsh": ">=0.2.1-rc.3"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-modules",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-connection"
+      ]
+    }
+  },
+  "files": [
+    "src",
+    "lib",
+    "renderer",
+    "native/win-x64",
+    "cordis.patch.yml",
+    "dsh.plugin.json",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "README.en.md",
+    "DEVELOPMENT.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "node --test tests/**/*.test.mjs",
+    "build:protocol": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "pack:release": "pnpm run check && pnpm test && pnpm pack --pack-destination dist"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh": ">=0.2.1-rc.3",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    },
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liushimu/dsh-workspace-detached.git"
+  },
+  "homepage": "https://github.com/liushimu/dsh-workspace-detached#readme",
+  "bugs": {
+    "url": "https://github.com/liushimu/dsh-workspace-detached/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "workspace",
+    "detached-window",
+    "session-navigation"
+  ]
+}

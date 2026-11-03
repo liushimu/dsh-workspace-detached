@@ -1,0 +1,10 @@
+node_modules/
+vendor/
+dist/
+.env
+.env.*
+*.log
+__pycache__/
+tests/native/bin/
+.DS_Store
+Thumbs.db
